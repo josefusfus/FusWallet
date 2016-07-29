@@ -11,8 +11,9 @@
 		971D09A81D4B665500951664 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 971D09A71D4B665500951664 /* AppDelegate.m */; };
 		971D09B01D4B665500951664 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 971D09AF1D4B665500951664 /* Assets.xcassets */; };
 		971D09B31D4B665500951664 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 971D09B11D4B665500951664 /* LaunchScreen.storyboard */; };
-		971D09BE1D4B665500951664 /* FusWalletTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 971D09BD1D4B665500951664 /* FusWalletTests.m */; };
 		971D09C91D4B665500951664 /* FusWalletUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 971D09C81D4B665500951664 /* FusWalletUITests.m */; };
+		971D09DD1D4B6AF600951664 /* FusEuroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 971D09DC1D4B6AF600951664 /* FusEuroTests.m */; };
+		971D09E11D4B6E8600951664 /* FUSEuro.m in Sources */ = {isa = PBXBuildFile; fileRef = 971D09E01D4B6E8600951664 /* FUSEuro.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,11 +42,13 @@
 		971D09B21D4B665500951664 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		971D09B41D4B665500951664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		971D09B91D4B665500951664 /* FusWalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FusWalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		971D09BD1D4B665500951664 /* FusWalletTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FusWalletTests.m; sourceTree = "<group>"; };
 		971D09BF1D4B665500951664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		971D09C41D4B665500951664 /* FusWalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FusWalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		971D09C81D4B665500951664 /* FusWalletUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FusWalletUITests.m; sourceTree = "<group>"; };
 		971D09CA1D4B665500951664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		971D09DC1D4B6AF600951664 /* FusEuroTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FusEuroTests.m; sourceTree = "<group>"; };
+		971D09DF1D4B6E8600951664 /* FUSEuro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUSEuro.h; sourceTree = "<group>"; };
+		971D09E01D4B6E8600951664 /* FUSEuro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUSEuro.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,7 @@
 		971D09A21D4B665500951664 /* FusWallet */ = {
 			isa = PBXGroup;
 			children = (
+				971D09DE1D4B6E4100951664 /* Models */,
 				971D09A61D4B665500951664 /* AppDelegate.h */,
 				971D09A71D4B665500951664 /* AppDelegate.m */,
 				971D09AF1D4B665500951664 /* Assets.xcassets */,
@@ -117,7 +121,7 @@
 		971D09BC1D4B665500951664 /* FusWalletTests */ = {
 			isa = PBXGroup;
 			children = (
-				971D09BD1D4B665500951664 /* FusWalletTests.m */,
+				971D09D61D4B6A0000951664 /* Models */,
 				971D09BF1D4B665500951664 /* Info.plist */,
 			);
 			path = FusWalletTests;
@@ -130,6 +134,23 @@
 				971D09CA1D4B665500951664 /* Info.plist */,
 			);
 			path = FusWalletUITests;
+			sourceTree = "<group>";
+		};
+		971D09D61D4B6A0000951664 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				971D09DC1D4B6AF600951664 /* FusEuroTests.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		971D09DE1D4B6E4100951664 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				971D09DF1D4B6E8600951664 /* FUSEuro.h */,
+				971D09E01D4B6E8600951664 /* FUSEuro.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				971D09A81D4B665500951664 /* AppDelegate.m in Sources */,
+				971D09E11D4B6E8600951664 /* FUSEuro.m in Sources */,
 				971D09A51D4B665500951664 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,7 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				971D09BE1D4B665500951664 /* FusWalletTests.m in Sources */,
+				971D09DD1D4B6AF600951664 /* FusEuroTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
