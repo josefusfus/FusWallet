@@ -37,4 +37,20 @@
     
 }
 
+
+#pragma mark - Ovewritten
+-(NSString *) description{
+    
+    return [NSString stringWithFormat:@"<%@ %ld",
+            [self class],
+            (long)[self amount]];
+}
+
+
+
+
+
+
+
+
 @end

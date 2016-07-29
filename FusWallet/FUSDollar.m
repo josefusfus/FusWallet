@@ -42,6 +42,14 @@
     return  [self amount] == [object amount];
 }
 
+-(NSUInteger) hash{ // ñapa para que funcione el hash en el test
+    
+    return (NSUInteger) self.amount;
+}
+
+
+
+
 @end
 
 

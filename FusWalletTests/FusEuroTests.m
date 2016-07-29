@@ -32,5 +32,17 @@
     
     XCTAssertEqualObjects(ten, total, @"Equivalen Object should be equal!!");
 }
+
+
+-(void) testHash{
+    
+    FUSEuro *a = [[FUSEuro alloc] initWithAmount:2];
+    FUSEuro *b = [[FUSEuro alloc] initWithAmount:2];
+    
+    XCTAssertEqual([a hash], [b hash], @"Equal object must have same hash");
+}
+
+
+
 @end
 
