@@ -1,5 +1,5 @@
 //
-//  FUSEuro.h
+//  FUSMoney.h
 //  FusWallet
 //
 //  Created by jose luis saez sanchez on 29/7/16.
@@ -7,14 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FUSMoney.h"
 
-@interface FUSEuro : NSObject
+@interface FUSMoney : NSObject
 
+-(id)initWithAmount:(NSInteger) amount;
 
-
--(id) initWithAmount:(NSInteger) amount;
-
--(FUSEuro*) times:(NSInteger) multiplier;
+-(FUSMoney*) times:(NSInteger) multiplier;
 
 @end

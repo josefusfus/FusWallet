@@ -19,7 +19,7 @@
     
     FUSEuro *euro = [[FUSEuro alloc] initWithAmount:5];
     FUSEuro *ten = [[FUSEuro alloc] initWithAmount:10];
-    FUSEuro *total = [euro times:2];
+    FUSEuro *total = [euro  times:2];
     
     XCTAssertEqualObjects(total, ten, @"€5 * 2 should be €10");
 }
