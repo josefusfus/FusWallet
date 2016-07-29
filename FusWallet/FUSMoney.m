@@ -7,6 +7,7 @@
 //
 
 #import "FUSMoney.h"
+#import "NSObject+GNUStepAddons.h"
 
 
 @interface FUSMoney ()
@@ -32,7 +33,7 @@
     // No se debe llamar, sino que deberia usar el de
     // la subclase
     
-    return self;
+    return [self subclassResponsibility:_cmd];
     
 }
 
