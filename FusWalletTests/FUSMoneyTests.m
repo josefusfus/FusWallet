@@ -74,6 +74,29 @@
 #pragma clang diagnostic pop
 }
 
+-(void) testSimpleAddition{ //Test de suma simple misma divisa
+    
+    XCTAssertEqualObjects([[FUSMoney dollarWithAmount:5] plus:
+                           [FUSMoney dollarWithAmount:5]],
+                           [FUSMoney dollarWithAmount:10],
+                            @"$5 + $5 = $10");
+}
+
+
+-(void) testThatHashIsAmount{
+    
+    FUSMoney *one = [FUSMoney dollarWithAmount:1];
+    XCTAssertEqual([one hash], 1, @"The hast must be the same as amount");
+}
+
+-(void) testDescription{
+    
+    
+    FUSMoney *one = [FUSMoney dollarWithAmount:1];
+    NSString *desc = @"<FUSMoney: USD 1>";
+    
+    XCTAssertEqualObjects(desc, [one description],@"Description must macht template");
+}
 
 
 

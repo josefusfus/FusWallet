@@ -17,6 +17,9 @@
 		971D09EF1D4BE40700951664 /* FUSMoneyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 971D09EE1D4BE40700951664 /* FUSMoneyTests.m */; };
 		971D09F01D4BE4DF00951664 /* FUSMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = 971D09E81D4BD9EE00951664 /* FUSMoney.m */; };
 		97E0C68A1D4CD4D600963EF7 /* NSObject+GNUStepAddons.m in Sources */ = {isa = PBXBuildFile; fileRef = 971D09EC1D4BDDC300951664 /* NSObject+GNUStepAddons.m */; };
+		97E0C6931D4E819600963EF7 /* FUSBrokerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E0C6921D4E819600963EF7 /* FUSBrokerTests.m */; };
+		97E0C6961D4E82AF00963EF7 /* FUSBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E0C6951D4E82AF00963EF7 /* FUSBroker.m */; };
+		97E0C6971D4E82B500963EF7 /* FUSBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E0C6951D4E82AF00963EF7 /* FUSBroker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,9 @@
 		971D09EB1D4BDDC300951664 /* NSObject+GNUStepAddons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GNUStepAddons.h"; sourceTree = "<group>"; };
 		971D09EC1D4BDDC300951664 /* NSObject+GNUStepAddons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GNUStepAddons.m"; sourceTree = "<group>"; };
 		971D09EE1D4BE40700951664 /* FUSMoneyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUSMoneyTests.m; sourceTree = "<group>"; };
+		97E0C6921D4E819600963EF7 /* FUSBrokerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUSBrokerTests.m; sourceTree = "<group>"; };
+		97E0C6941D4E82AF00963EF7 /* FUSBroker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUSBroker.h; sourceTree = "<group>"; };
+		97E0C6951D4E82AF00963EF7 /* FUSBroker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUSBroker.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				971D09EE1D4BE40700951664 /* FUSMoneyTests.m */,
+				97E0C6921D4E819600963EF7 /* FUSBrokerTests.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -155,6 +162,8 @@
 			children = (
 				971D09E71D4BD9EE00951664 /* FUSMoney.h */,
 				971D09E81D4BD9EE00951664 /* FUSMoney.m */,
+				97E0C6941D4E82AF00963EF7 /* FUSBroker.h */,
+				97E0C6951D4E82AF00963EF7 /* FUSBroker.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -299,6 +308,7 @@
 			files = (
 				971D09A81D4B665500951664 /* AppDelegate.m in Sources */,
 				971D09ED1D4BDDC300951664 /* NSObject+GNUStepAddons.m in Sources */,
+				97E0C6961D4E82AF00963EF7 /* FUSBroker.m in Sources */,
 				971D09A51D4B665500951664 /* main.m in Sources */,
 				971D09E91D4BD9EE00951664 /* FUSMoney.m in Sources */,
 			);
@@ -309,6 +319,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				97E0C68A1D4CD4D600963EF7 /* NSObject+GNUStepAddons.m in Sources */,
+				97E0C6931D4E819600963EF7 /* FUSBrokerTests.m in Sources */,
+				97E0C6971D4E82B500963EF7 /* FUSBroker.m in Sources */,
 				971D09EF1D4BE40700951664 /* FUSMoneyTests.m in Sources */,
 				971D09F01D4BE4DF00951664 /* FUSMoney.m in Sources */,
 			);

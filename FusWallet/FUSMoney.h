@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface FUSMoney : NSObject
-
+@property (nonatomic, strong, readonly) NSNumber *amount;
 @property (nonatomic,readonly) NSString *currency;
 
 +(id) euroWithAmount:(NSInteger) amount;
@@ -20,6 +20,7 @@
 
 -(id) times:(NSInteger) multiplier;
 
+-(FUSMoney *) plus:(FUSMoney *) other;
 
 
 @end

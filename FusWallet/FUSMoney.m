@@ -53,13 +53,22 @@
     
 }
 
+-(FUSMoney *) plus:(FUSMoney *) other{
+    
+    NSInteger totalAmount = [self.amount integerValue] + [other.amount integerValue];
+    
+    FUSMoney *total = [[FUSMoney alloc] initWithAmount:totalAmount
+                                              currency:self.currency];
+    return total;
+}
+
 
 #pragma mark - Ovewritten
 -(NSString *) description{
     
-    return [NSString stringWithFormat:@"<%@ %ld>",
+    return [NSString stringWithFormat:@"<%@: %@ %@>",
             [self class],
-            (long)[self amount]];
+            self.currency, self.amount];
 }
 
 -(BOOL)isEqual:(id)object{ // implementando aqui currency ademas de amount hacemos
@@ -79,7 +88,7 @@
 -(NSUInteger) hash{ // ñapa para que funcione el hash en el test
     
     
-    return (NSUInteger) self.amount;
+    return [self.amount integerValue];
 }
 
 
