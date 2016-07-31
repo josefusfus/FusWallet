@@ -10,11 +10,16 @@
 
 @interface FUSMoney : NSObject
 
+@property (nonatomic,readonly) NSString *currency;
+
 +(id) euroWithAmount:(NSInteger) amount;
 +(id) dollarWithAmount:(NSInteger) amount;
 
--(id)initWithAmount:(NSInteger) amount;
+-(id)initWithAmount:(NSInteger) amount
+           currency:(NSString *) currency;
 
--(FUSMoney*) times:(NSInteger) multiplier;
+-(id) times:(NSInteger) multiplier;
+
+
 
 @end

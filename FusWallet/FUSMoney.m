@@ -9,31 +9,34 @@
 
 #import "NSObject+GNUStepAddons.h"
 #import "FUSMoney.h"
-#import "FUSMoney-Private.h"
-#import "FUSEuro.h"
-#import "FUSDollar.h"
 
+
+@interface FUSMoney ()
+
+@property (nonatomic, strong) NSNumber *amount;
+@end
 
 @implementation FUSMoney
 
 
 +(id) euroWithAmount:(NSInteger) amount{
     
-    return  [[FUSEuro alloc] initWithAmount:amount];
+    return  [[FUSMoney alloc] initWithAmount:amount currency:@"EUR"];
 }
 
 +(id) dollarWithAmount:(NSInteger) amount{
     
-    return [[FUSDollar alloc] initWithAmount:amount];
+    return [[FUSMoney alloc] initWithAmount:amount currency:@"USD"];
     
 }
 
 
--(id)initWithAmount:(NSInteger) amount{
+-(id)initWithAmount:(NSInteger) amount currency:(NSString *) currency{
     
     if (self = [super init]){
         
         _amount = @(amount);
+        _currency = currency;
     }
     
     return  self;
@@ -41,12 +44,12 @@
     
 }
 
--(FUSMoney *) times:(NSInteger) multiplier{
+-(id) times:(NSInteger) multiplier{
     
-    // No se debe llamar, sino que deberia usar el de
-    // la subclase
+    FUSMoney *newMoney = [[FUSMoney alloc]
+                          initWithAmount:[self.amount integerValue] *multiplier currency:self.currency];
     
-    return [self subclassResponsibility:_cmd];
+    return newMoney;
     
 }
 

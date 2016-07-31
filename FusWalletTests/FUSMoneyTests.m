@@ -15,9 +15,56 @@
 
 @implementation FUSMoneyTests
 
--(void) testThatTimesRaisesException{
+-(void) testCurrencies{
     
-    FUSMoney *money = [[FUSMoney alloc] initWithAmount:1];
-    XCTAssertThrows([money times:2], @"Should raise an exception");
+    XCTAssertEqualObjects(@"EUR", [[FUSMoney euroWithAmount:1] currency],@"The currency of euros should be EUR");
+    
+    XCTAssertEqualObjects(@"USD", [[FUSMoney dollarWithAmount:1] currency],@"The currency of $1 should be USD");
 }
+
+-(void)testMultiplication{
+    
+    FUSMoney *euro = [FUSMoney euroWithAmount:5];
+    FUSMoney *ten = [FUSMoney euroWithAmount:10];
+    FUSMoney *total = [euro  times:2];
+    
+    XCTAssertEqualObjects(total, ten, @"€5 * 2 should be €10");
+}
+
+-(void) testEquality{
+    
+    FUSMoney *five = [FUSMoney euroWithAmount:5];
+    FUSMoney *ten = [FUSMoney euroWithAmount:10];
+    FUSMoney *total = [five times:2];
+    
+    XCTAssertEqualObjects(ten, total, @"Equivalen Object should be equal!!");
+    XCTAssertEqualObjects([FUSMoney dollarWithAmount:4], [[FUSMoney dollarWithAmount:2] times:2], @"Equivalent object should be equal");
+}
+
+
+-(void) testHash{
+    
+    FUSMoney *a = [FUSMoney euroWithAmount:2];
+    FUSMoney *b = [FUSMoney euroWithAmount:2];
+    
+    XCTAssertEqual([a hash], [b hash], @"Equal object must have same hash");
+    XCTAssertEqual([[FUSMoney dollarWithAmount:1] hash], [[FUSMoney dollarWithAmount:1]hash], @"Equal object must have same hash");
+}
+
+-(void) testAmountStorage{
+    
+    FUSMoney *euro = [FUSMoney euroWithAmount:2];
+    
+    
+#pragma clang diagnostic push //Con estos tres pragmas quitamos warnings
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+    
+    XCTAssertEqual(2, [[euro performSelector:@selector(amount)]integerValue], @"The value should be the same as the stored");
+    XCTAssertEqual(2, [[[FUSMoney dollarWithAmount:2]performSelector:@selector(amount)]integerValue], @"The value retrieved should be the same as the stored");
+#pragma clang diagnostic pop
+}
+
+
+
+
 @end
