@@ -10,6 +10,9 @@
 
 @interface FUSMoney : NSObject
 
++(id) euroWithAmount:(NSInteger) amount;
++(id) dollarWithAmount:(NSInteger) amount;
+
 -(id)initWithAmount:(NSInteger) amount;
 
 -(FUSMoney*) times:(NSInteger) multiplier;

@@ -10,9 +10,24 @@
 #import "NSObject+GNUStepAddons.h"
 #import "FUSMoney.h"
 #import "FUSMoney-Private.h"
+#import "FUSEuro.h"
+#import "FUSDollar.h"
 
 
 @implementation FUSMoney
+
+
++(id) euroWithAmount:(NSInteger) amount{
+    
+    return  [[FUSEuro alloc] initWithAmount:amount];
+}
+
++(id) dollarWithAmount:(NSInteger) amount{
+    
+    return [[FUSDollar alloc] initWithAmount:amount];
+    
+}
+
 
 -(id)initWithAmount:(NSInteger) amount{
     

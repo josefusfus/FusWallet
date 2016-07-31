@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "FUSDollar.h"
+#import "FUSMoney.h"
 
 @interface FUSDollarTests : XCTestCase
 
@@ -17,9 +18,9 @@
 
 -(void) testMultiplication{
     
-    FUSDollar *five = [[FUSDollar alloc] initWithAmount: 5];
+    FUSDollar *five = [FUSMoney dollarWithAmount: 5];
     FUSDollar *total = [five times:2];
-    FUSDollar *ten = [[FUSDollar alloc] initWithAmount : 10];
+    FUSDollar *ten = [FUSMoney dollarWithAmount : 10];
     
     XCTAssertEqualObjects(ten, total, @"$5 * 2 = $10");
 }
@@ -27,9 +28,9 @@
 
 -(void) testEquality{
     
-    FUSDollar *five = [[FUSDollar alloc] initWithAmount:5];
+    FUSDollar *five = [FUSMoney dollarWithAmount:5];
     FUSDollar *total = [five times:2];
-    FUSDollar *ten = [[FUSDollar alloc] initWithAmount:10];
+    FUSDollar *ten = [FUSMoney dollarWithAmount:10];
     
     XCTAssertEqualObjects(total, ten, @"Equivalent Onjects should be equal");
     
@@ -40,15 +41,15 @@
 
 -(void) testHash{
     
-    FUSDollar *a = [[FUSDollar alloc] initWithAmount:2];
-    FUSDollar *b = [[FUSDollar alloc] initWithAmount:2];
+    FUSDollar *a = [FUSMoney dollarWithAmount:2];
+    FUSDollar *b = [FUSMoney dollarWithAmount:2];
     
     XCTAssertEqual([a hash], [b hash], @"Equal object must have same hash");
 }
 
 -(void) testAmountStorage{
     
-    FUSDollar *dollar = [[FUSDollar alloc] initWithAmount:2];
+    FUSDollar *dollar = [FUSMoney dollarWithAmount:2];
     
     
 #pragma clang diagnostic push //Con estos tres pragmas quitamos warnings
