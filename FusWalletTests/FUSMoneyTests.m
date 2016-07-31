@@ -42,6 +42,16 @@
 }
 
 
+//hacemos un test para $1 != €1
+-(void) testDifferentCurrencies{
+    FUSMoney *euro = [FUSMoney euroWithAmount:1];
+    FUSMoney *dollar = [FUSMoney dollarWithAmount:1];
+    
+    XCTAssertNotEqualObjects(euro, dollar, @"Different currencies not be equal");
+    
+}
+
+
 -(void) testHash{
     
     FUSMoney *a = [FUSMoney euroWithAmount:2];

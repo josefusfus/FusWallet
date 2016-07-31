@@ -62,10 +62,19 @@
             (long)[self amount]];
 }
 
--(BOOL)isEqual:(id)object{
+-(BOOL)isEqual:(id)object{ // implementando aqui currency ademas de amount hacemos
+                           // posible la comparación de divisas
     
-    return  [self amount] == [object amount];
+    if ([self.currency isEqual:[object currency]]){
+        return  [self amount] == [object amount];
+    } else {
+        return NO;
+        
+        }
 }
+
+    
+
 
 -(NSUInteger) hash{ // ñapa para que funcione el hash en el test
     
