@@ -9,6 +9,8 @@
 #import <XCTest/XCTest.h>
 #import "FUSEuro.h"
 
+
+
 @interface FusEuroTests : XCTestCase
 
 @end
@@ -42,6 +44,17 @@
     XCTAssertEqual([a hash], [b hash], @"Equal object must have same hash");
 }
 
+-(void) testAmountStorage{
+    
+    FUSEuro *euro = [[FUSEuro alloc] initWithAmount:2];
+    
+
+#pragma clang diagnostic push //Con estos tres pragmas quitamos warnings
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+    
+    XCTAssertEqual(2, [[euro performSelector:@selector(amount)]integerValue], @"The value should be the same as the stored");
+#pragma clang diagnostic pop
+}
 
 
 @end

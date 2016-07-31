@@ -7,29 +7,16 @@
 //
 
 #import "FUSDollar.h"
+#import "FUSMoney.h"
+#import "FUSMoney-Private.h"
 
 
-
-@interface FUSDollar()
-@property (nonatomic) NSInteger amount;
-@end
 @implementation FUSDollar
 
 
--(id) initWithAmount:(NSInteger) amount{
-    
-    if (self = [super init]){
-        
-        _amount = amount;
-    }
-    
-    return self;
-    
-}
-
 -(FUSDollar *) times:(NSInteger) multiplier{
     
-    FUSDollar *newDollar = [[FUSDollar alloc] initWithAmount:self.amount * multiplier];
+    FUSDollar *newDollar = [[FUSDollar alloc] initWithAmount:[self.amount integerValue] * multiplier];
     
     return  newDollar;
 }
@@ -37,15 +24,9 @@
 
 #pragma mark - Overwritten
 
--(BOOL)isEqual:(id)object{
-    
-    return  [self amount] == [object amount];
-}
 
--(NSUInteger) hash{ // ñapa para que funcione el hash en el test
-    
-    return (NSUInteger) self.amount;
-}
+
+
 
 
 

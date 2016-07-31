@@ -20,6 +20,9 @@
 		971D09ED1D4BDDC300951664 /* NSObject+GNUStepAddons.m in Sources */ = {isa = PBXBuildFile; fileRef = 971D09EC1D4BDDC300951664 /* NSObject+GNUStepAddons.m */; };
 		971D09EF1D4BE40700951664 /* FUSMoneyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 971D09EE1D4BE40700951664 /* FUSMoneyTests.m */; };
 		971D09F01D4BE4DF00951664 /* FUSMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = 971D09E81D4BD9EE00951664 /* FUSMoney.m */; };
+		97E0C68A1D4CD4D600963EF7 /* NSObject+GNUStepAddons.m in Sources */ = {isa = PBXBuildFile; fileRef = 971D09EC1D4BDDC300951664 /* NSObject+GNUStepAddons.m */; };
+		97E0C68D1D4CD94200963EF7 /* FUSEuro.m in Sources */ = {isa = PBXBuildFile; fileRef = 971D09E01D4B6E8600951664 /* FUSEuro.m */; };
+		97E0C68E1D4CD94600963EF7 /* FUSDollar.m in Sources */ = {isa = PBXBuildFile; fileRef = 971D09E51D4BD5B500951664 /* FUSDollar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,7 @@
 		971D09EB1D4BDDC300951664 /* NSObject+GNUStepAddons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GNUStepAddons.h"; sourceTree = "<group>"; };
 		971D09EC1D4BDDC300951664 /* NSObject+GNUStepAddons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GNUStepAddons.m"; sourceTree = "<group>"; };
 		971D09EE1D4BE40700951664 /* FUSMoneyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUSMoneyTests.m; sourceTree = "<group>"; };
+		97E0C68F1D4E197700963EF7 /* FUSMoney-Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FUSMoney-Private.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +174,7 @@
 				971D09E51D4BD5B500951664 /* FUSDollar.m */,
 				971D09E71D4BD9EE00951664 /* FUSMoney.h */,
 				971D09E81D4BD9EE00951664 /* FUSMoney.m */,
+				97E0C68F1D4E197700963EF7 /* FUSMoney-Private.h */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -326,6 +331,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				971D09E31D4BD4AF00951664 /* FUSDollarTests.m in Sources */,
+				97E0C68E1D4CD94600963EF7 /* FUSDollar.m in Sources */,
+				97E0C68D1D4CD94200963EF7 /* FUSEuro.m in Sources */,
+				97E0C68A1D4CD4D600963EF7 /* NSObject+GNUStepAddons.m in Sources */,
 				971D09DD1D4B6AF600951664 /* FusEuroTests.m in Sources */,
 				971D09EF1D4BE40700951664 /* FUSMoneyTests.m in Sources */,
 				971D09F01D4BE4DF00951664 /* FUSMoney.m in Sources */,
@@ -538,6 +546,7 @@
 				971D09CF1D4B665500951664 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		971D09D01D4B665500951664 /* Build configuration list for PBXNativeTarget "FusWalletTests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +555,7 @@
 				971D09D21D4B665500951664 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		971D09D31D4B665500951664 /* Build configuration list for PBXNativeTarget "FusWalletUITests" */ = {
 			isa = XCConfigurationList;
@@ -554,6 +564,7 @@
 				971D09D51D4B665500951664 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

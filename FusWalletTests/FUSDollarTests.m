@@ -46,4 +46,16 @@
     XCTAssertEqual([a hash], [b hash], @"Equal object must have same hash");
 }
 
+-(void) testAmountStorage{
+    
+    FUSDollar *dollar = [[FUSDollar alloc] initWithAmount:2];
+    
+    
+#pragma clang diagnostic push //Con estos tres pragmas quitamos warnings
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+    
+    XCTAssertEqual(2, [[dollar performSelector:@selector(amount)]integerValue], @"The value should be the same as the stored");
+#pragma clang diagnostic pop
+}
+
 @end

@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "FUSMoney.h"
 
-@interface FUSDollar : NSObject
+@interface FUSDollar : FUSMoney
 
--(id) initWithAmount:(NSInteger) amount;
+
 
 -(FUSDollar*) times:(NSInteger) multiplier;
 

@@ -6,13 +6,11 @@
 //  Copyright © 2016 JoseFusFus. All rights reserved.
 //
 
-#import "FUSMoney.h"
+
 #import "NSObject+GNUStepAddons.h"
+#import "FUSMoney.h"
+#import "FUSMoney-Private.h"
 
-
-@interface FUSMoney ()
-@property (nonatomic) NSInteger amount;
-@end
 
 @implementation FUSMoney
 
@@ -20,7 +18,7 @@
     
     if (self = [super init]){
         
-        _amount = amount;
+        _amount = @(amount);
     }
     
     return  self;
@@ -41,11 +39,21 @@
 #pragma mark - Ovewritten
 -(NSString *) description{
     
-    return [NSString stringWithFormat:@"<%@ %ld",
+    return [NSString stringWithFormat:@"<%@ %ld>",
             [self class],
             (long)[self amount]];
 }
 
+-(BOOL)isEqual:(id)object{
+    
+    return  [self amount] == [object amount];
+}
+
+-(NSUInteger) hash{ // ñapa para que funcione el hash en el test
+    
+    
+    return (NSUInteger) self.amount;
+}
 
 
 
