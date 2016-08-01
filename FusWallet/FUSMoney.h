@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 @class FUSMoney;
+@class FUSBroker;
 
 @protocol FUSMoney <NSObject>
 
@@ -17,6 +18,9 @@
 -(id<FUSMoney>) times:(NSInteger) multiplier;
 
 -(id<FUSMoney>) plus:(FUSMoney *) other;
+
+-(id<FUSMoney>) reduceToCurrency:(NSString*) currency
+                      withBroker:(FUSBroker*) broker;
 
 
 @end
@@ -29,9 +33,6 @@
 
 +(id) euroWithAmount:(NSInteger) amount;
 +(id) dollarWithAmount:(NSInteger) amount;
-
-
-
 
 
 @end

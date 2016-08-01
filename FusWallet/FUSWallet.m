@@ -47,4 +47,25 @@
     return self;
 }
 
+-(id<FUSMoney>) reduceToCurrency:(NSString*) currency
+                      withBroker:(FUSBroker*) broker{
+    
+    
+    FUSMoney *result = [[FUSMoney alloc] initWithAmount:0 currency:currency];
+    
+    for (FUSMoney *each in self.moneys){
+        
+        result = [result plus:[each reduceToCurrency:currency withBroker:broker]];
+    }
+    
+    return result;
+    
+    
+}
+
+
+
+
+
+
 @end

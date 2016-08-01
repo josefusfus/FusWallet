@@ -9,6 +9,7 @@
 
 #import "NSObject+GNUStepAddons.h"
 #import "FUSMoney.h"
+#import "FUSBroker.h"
 
 
 @interface FUSMoney ()
@@ -62,6 +63,39 @@
     return total;
 }
 
+
+-(id<FUSMoney>) reduceToCurrency:(NSString*) currency
+                      withBroker:(FUSBroker*) broker{
+    
+    FUSMoney *result;
+    double rate = [[broker.rates
+                    objectForKey:[broker keyFromCurrency:self.currency
+                                            toCurrency:currency]] doubleValue];
+    // Comprobamos que divisa origen y destino son las mismas
+    if ([self.currency isEqual:currency]){
+        result = self;
+        
+    }else if(rate == 0){
+        
+        //No hay tasa de conversion, excepcion!!
+        [NSException raise:@"NoConversionRateException"
+                    format:@"Must have a conversion from %@ to %@", self.currency, currency];
+    }else{
+        // Tenemos conversion
+        
+        
+        NSUInteger newAmount = [self.amount integerValue] * rate;
+        
+        result = [[FUSMoney alloc]
+                  initWithAmount:newAmount
+                  currency:currency];
+    }
+    
+    return result;
+    
+
+    
+}
 
 #pragma mark - Ovewritten
 -(NSString *) description{

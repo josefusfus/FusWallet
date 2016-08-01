@@ -36,7 +36,8 @@
 }
 
 // €40 + $20 = $100 2:1
-/*
+
+
 -(void) testAdditionWithReduction{
     
     FUSBroker *broker = [FUSBroker new];
@@ -45,9 +46,9 @@
     FUSWallet *wallet = [[FUSWallet alloc] initWithAmount:40 currency:@"EUR"];
     [wallet plus: [FUSMoney dollarWithAmount:20]];
     
-    FUSMoney *reduced = [broker reduced:wallet toCurrency:@"USD"];
+    FUSMoney *reduced = [broker reduce:wallet toCurrency:@"USD"];
     XCTAssertEqualObjects(reduced, [FUSMoney dollarWithAmount:100], @"€40 + $20 = 100 2:1");
     
-    
-} */
+}
+
 @end
