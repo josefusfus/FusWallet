@@ -13,7 +13,7 @@
 
 @interface FUSMoney ()
 
-@property (nonatomic, strong) NSNumber *amount;
+@property (nonatomic,strong) NSNumber *amount;
 @end
 
 @implementation FUSMoney
@@ -44,7 +44,7 @@
     
 }
 
--(id) times:(NSInteger) multiplier{
+-(id<FUSMoney>) times:(NSInteger) multiplier{
     
     FUSMoney *newMoney = [[FUSMoney alloc]
                           initWithAmount:[self.amount integerValue] *multiplier currency:self.currency];
@@ -53,7 +53,7 @@
     
 }
 
--(FUSMoney *) plus:(FUSMoney *) other{
+-(id<FUSMoney>) plus:(FUSMoney *) other{
     
     NSInteger totalAmount = [self.amount integerValue] + [other.amount integerValue];
     

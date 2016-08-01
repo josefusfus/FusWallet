@@ -24,7 +24,7 @@
     return self;
 }
 
--(FUSMoney *)reduce:(FUSMoney*) money
+-(id<FUSMoney>)reduce:(FUSMoney*) money
          toCurrency:(NSString *) currency{
     
     FUSMoney *result;

@@ -7,20 +7,31 @@
 //
 
 #import <Foundation/Foundation.h>
+@class FUSMoney;
 
-@interface FUSMoney : NSObject
-@property (nonatomic, strong, readonly) NSNumber *amount;
-@property (nonatomic,readonly) NSString *currency;
-
-+(id) euroWithAmount:(NSInteger) amount;
-+(id) dollarWithAmount:(NSInteger) amount;
+@protocol FUSMoney <NSObject>
 
 -(id)initWithAmount:(NSInteger) amount
            currency:(NSString *) currency;
 
--(id) times:(NSInteger) multiplier;
+-(id<FUSMoney>) times:(NSInteger) multiplier;
 
--(FUSMoney *) plus:(FUSMoney *) other;
+-(id<FUSMoney>) plus:(FUSMoney *) other;
+
+
+@end
+
+@interface FUSMoney : NSObject<FUSMoney>
+
+@property (nonatomic, strong, readonly) NSNumber *amount;
+@property (nonatomic,readonly) NSString *currency;
+
+
++(id) euroWithAmount:(NSInteger) amount;
++(id) dollarWithAmount:(NSInteger) amount;
+
+
+
 
 
 @end

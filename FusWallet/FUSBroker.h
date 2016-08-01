@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-@class FUSMoney;
+#import "FUSMoney.h"
 @interface FUSBroker : NSObject
 
--(FUSMoney *)reduce:(FUSMoney*) money toCurrency:(NSString*) currency;
--(void) addRate:(NSInteger) rate fromCurrency:(NSString*)fromCurrency toCurrency:(NSString*)toCurrency;
+-(id<FUSMoney>)reduce:(FUSMoney*) money toCurrency:(NSString*) currency;
+-(void) addRate:(NSInteger) rate
+   fromCurrency:(NSString*)fromCurrency
+     toCurrency:(NSString*)toCurrency;
 
 @end
