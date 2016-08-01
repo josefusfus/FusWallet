@@ -16,6 +16,11 @@
 		971D09ED1D4BDDC300951664 /* NSObject+GNUStepAddons.m in Sources */ = {isa = PBXBuildFile; fileRef = 971D09EC1D4BDDC300951664 /* NSObject+GNUStepAddons.m */; };
 		971D09EF1D4BE40700951664 /* FUSMoneyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 971D09EE1D4BE40700951664 /* FUSMoneyTests.m */; };
 		971D09F01D4BE4DF00951664 /* FUSMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = 971D09E81D4BD9EE00951664 /* FUSMoney.m */; };
+		97D1DE081D4FCBE000AE3F33 /* FusSimpleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97D1DE061D4FCBE000AE3F33 /* FusSimpleViewController.m */; };
+		97D1DE091D4FCBE000AE3F33 /* FusSimpleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97D1DE061D4FCBE000AE3F33 /* FusSimpleViewController.m */; };
+		97D1DE0A1D4FCBE000AE3F33 /* FusSimpleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97D1DE071D4FCBE000AE3F33 /* FusSimpleViewController.xib */; };
+		97D1DE0B1D4FCBE000AE3F33 /* FusSimpleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97D1DE071D4FCBE000AE3F33 /* FusSimpleViewController.xib */; };
+		97D1DE0E1D4FCC4300AE3F33 /* FUSControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97D1DE0D1D4FCC4300AE3F33 /* FUSControllerTests.m */; };
 		97E0C68A1D4CD4D600963EF7 /* NSObject+GNUStepAddons.m in Sources */ = {isa = PBXBuildFile; fileRef = 971D09EC1D4BDDC300951664 /* NSObject+GNUStepAddons.m */; };
 		97E0C6931D4E819600963EF7 /* FUSBrokerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E0C6921D4E819600963EF7 /* FUSBrokerTests.m */; };
 		97E0C6961D4E82AF00963EF7 /* FUSBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E0C6951D4E82AF00963EF7 /* FUSBroker.m */; };
@@ -60,6 +65,10 @@
 		971D09EB1D4BDDC300951664 /* NSObject+GNUStepAddons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GNUStepAddons.h"; sourceTree = "<group>"; };
 		971D09EC1D4BDDC300951664 /* NSObject+GNUStepAddons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GNUStepAddons.m"; sourceTree = "<group>"; };
 		971D09EE1D4BE40700951664 /* FUSMoneyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUSMoneyTests.m; sourceTree = "<group>"; };
+		97D1DE051D4FCBE000AE3F33 /* FusSimpleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FusSimpleViewController.h; sourceTree = "<group>"; };
+		97D1DE061D4FCBE000AE3F33 /* FusSimpleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FusSimpleViewController.m; sourceTree = "<group>"; };
+		97D1DE071D4FCBE000AE3F33 /* FusSimpleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FusSimpleViewController.xib; sourceTree = "<group>"; };
+		97D1DE0D1D4FCC4300AE3F33 /* FUSControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUSControllerTests.m; sourceTree = "<group>"; };
 		97E0C6921D4E819600963EF7 /* FUSBrokerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUSBrokerTests.m; sourceTree = "<group>"; };
 		97E0C6941D4E82AF00963EF7 /* FUSBroker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUSBroker.h; sourceTree = "<group>"; };
 		97E0C6951D4E82AF00963EF7 /* FUSBroker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUSBroker.m; sourceTree = "<group>"; };
@@ -116,6 +125,7 @@
 		971D09A21D4B665500951664 /* FusWallet */ = {
 			isa = PBXGroup;
 			children = (
+				97D1DE041D4FCB4F00AE3F33 /* Controllers */,
 				971D09EA1D4BDD6400951664 /* Categories */,
 				971D09DE1D4B6E4100951664 /* Models */,
 				971D09A61D4B665500951664 /* AppDelegate.h */,
@@ -139,6 +149,7 @@
 		971D09BC1D4B665500951664 /* FusWalletTests */ = {
 			isa = PBXGroup;
 			children = (
+				97D1DE0C1D4FCBFA00AE3F33 /* Controllers */,
 				971D09D61D4B6A0000951664 /* Models */,
 				971D09BF1D4B665500951664 /* Info.plist */,
 			);
@@ -184,6 +195,24 @@
 				971D09EC1D4BDDC300951664 /* NSObject+GNUStepAddons.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		97D1DE041D4FCB4F00AE3F33 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				97D1DE051D4FCBE000AE3F33 /* FusSimpleViewController.h */,
+				97D1DE061D4FCBE000AE3F33 /* FusSimpleViewController.m */,
+				97D1DE071D4FCBE000AE3F33 /* FusSimpleViewController.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		97D1DE0C1D4FCBFA00AE3F33 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				97D1DE0D1D4FCC4300AE3F33 /* FUSControllerTests.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +318,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97D1DE0A1D4FCBE000AE3F33 /* FusSimpleViewController.xib in Resources */,
 				971D09B31D4B665500951664 /* LaunchScreen.storyboard in Resources */,
 				971D09B01D4B665500951664 /* Assets.xcassets in Resources */,
 			);
@@ -298,6 +328,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97D1DE0B1D4FCBE000AE3F33 /* FusSimpleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				971D09A81D4B665500951664 /* AppDelegate.m in Sources */,
+				97D1DE081D4FCBE000AE3F33 /* FusSimpleViewController.m in Sources */,
 				971D09ED1D4BDDC300951664 /* NSObject+GNUStepAddons.m in Sources */,
 				97E0C6961D4E82AF00963EF7 /* FUSBroker.m in Sources */,
 				971D09A51D4B665500951664 /* main.m in Sources */,
@@ -331,6 +363,8 @@
 				97E0C68A1D4CD4D600963EF7 /* NSObject+GNUStepAddons.m in Sources */,
 				97E0C6931D4E819600963EF7 /* FUSBrokerTests.m in Sources */,
 				97E0C6971D4E82B500963EF7 /* FUSBroker.m in Sources */,
+				97D1DE0E1D4FCC4300AE3F33 /* FUSControllerTests.m in Sources */,
+				97D1DE091D4FCBE000AE3F33 /* FusSimpleViewController.m in Sources */,
 				971D09EF1D4BE40700951664 /* FUSMoneyTests.m in Sources */,
 				97E0C69D1D4EC77400963EF7 /* FUSWallet.m in Sources */,
 				971D09F01D4BE4DF00951664 /* FUSMoney.m in Sources */,
