@@ -7,6 +7,7 @@
 //
 
 #import "FUSWallet.h"
+#import <UIKit/UIKit.h>
 
 
 @interface FUSWallet()
@@ -68,7 +69,22 @@
     
 }
 
+#pragma mark - notifications
 
+-(void) subscribeToMemoryWarning:(NSNotificationCenter *) nc{
+    
+    [nc addObserver:self
+           selector:@selector(dumpToDisk:)
+               name:UIApplicationDidReceiveMemoryWarningNotification
+             object:nil];
+    
+}
+
+
+-(void) dumpToDisk:(NSNotification *)notification{
+    
+    //Guarda las cosas en disco cuando se ponga chunga la cosa
+}
 
 
 

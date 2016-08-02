@@ -12,4 +12,7 @@
 @interface FUSWallet : NSObject<FUSMoney>
 @property (nonatomic,readonly) NSUInteger count;
 
+-(void) subscribeToMemoryWarning:(NSNotificationCenter *) nc;
+
+
 @end
