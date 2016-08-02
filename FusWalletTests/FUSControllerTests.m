@@ -8,11 +8,16 @@
 
 #import <XCTest/XCTest.h>
 #import "FusSimpleViewController.h"
+#import "FUSWalletTableViewController.h"
+#import "FUSWallet.h"
 
 @interface FUSControllerTests : XCTestCase
 @property (nonatomic, strong) FusSimpleViewController *simpleVC;
 @property (nonatomic, strong) UIButton *button;
 @property (nonatomic,strong) UILabel *label;
+
+@property (nonatomic,strong) FUSWalletTableViewController *walletVC;
+@property (nonatomic, strong) FUSWallet *wallet;
 
 @end
 
@@ -26,6 +31,10 @@
     [self.button setTitle:@"Hola" forState:UIControlStateNormal];
     self.label = [[UILabel alloc] initWithFrame:CGRectZero];
     self.simpleVC.displayLabel = self.label;
+    
+    self.wallet= [[FUSWallet alloc] initWithAmount:1 currency:@"USD"];
+    [self.wallet plus:[FUSMoney euroWithAmount:1]];
+    self.walletVC = [[FUSWalletTableViewController alloc] initWithModel:self.wallet];
 }
 
 - (void)tearDown {
@@ -47,5 +56,32 @@
     
     
 }
+
+-(void) testThatTablehasOneSection{
+    
+    NSInteger sections = [self.walletVC numberOfSectionsInTableView:nil];
+    
+    XCTAssertEqual(sections, 1, @"There can only be one");
+}
+
+
+-(void) testThatNumberCellsIsNumberOfMoneysPlusOne{
+    
+    XCTAssertEqual(self.wallet.count + 1,
+                   [self.walletVC tableView:nil numberOfRowsInSection:0],
+                   @"Number of cells is the number of moneys plus 1 (The total)");
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
 
 @end

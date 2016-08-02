@@ -10,5 +10,6 @@
 #import "FUSMoney.h"
 
 @interface FUSWallet : NSObject<FUSMoney>
+@property (nonatomic,readonly) NSUInteger count;
 
 @end
