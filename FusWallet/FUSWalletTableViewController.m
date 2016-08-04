@@ -8,6 +8,10 @@
 
 #import "FUSWalletTableViewController.h"
 #import "FUSWallet.h"
+#import "FUSBroker.h"
+#define euro_section 0
+#define dollar_section 1
+#define pesos_mex_section 2
 
 @interface FUSWalletTableViewController ()
 @property (nonatomic,strong) FUSWallet *model;
@@ -15,13 +19,20 @@
 
 @implementation FUSWalletTableViewController
 
--(id) initWithModel:(FUSWallet *) model{
+-(id) initWithModel:(FUSWallet *) model
+             broker:(FUSBroker *) broker{
     
     if (self = [super initWithStyle:UITableViewStylePlain]){
         _model = model;
+        self.title = @"Wallet";
     }
     
     return self;
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    
+    [super viewWillAppear:animated];
 }
 
 - (void)viewDidLoad {
@@ -43,23 +54,43 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
-    return 1;
+    return [self.model count] + 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return [self.model count] + 1;
+    if (section == self.model.count){
+        return 1;
+    }else{
+        return [self.model count] +1 ;
+
+    }
+    
+    }
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    
+    return  @"seccion";
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if (cell == nil){
+        
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    }
     
     // Configure the cell...
     
+    //cell.textLabel.text = self.model.
+
+    
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

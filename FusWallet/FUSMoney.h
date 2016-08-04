@@ -33,6 +33,7 @@
 
 +(id) euroWithAmount:(NSInteger) amount;
 +(id) dollarWithAmount:(NSInteger) amount;
++(id) mxnWithAmount:(NSInteger) amount;
 
 
 @end

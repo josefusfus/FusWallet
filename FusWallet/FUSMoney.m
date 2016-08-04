@@ -31,6 +31,12 @@
     
 }
 
++(id) mxnWithAmount:(NSInteger) amount{
+    
+    return [[FUSMoney alloc] initWithAmount:amount currency:@"MXN"];
+    
+}
+
 
 -(id)initWithAmount:(NSInteger) amount currency:(NSString *) currency{
     

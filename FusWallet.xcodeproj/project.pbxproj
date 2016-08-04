@@ -10,6 +10,7 @@
 		7E8E60E31D511FC600EAE9E6 /* FusNotificationCenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8E60E21D511FC600EAE9E6 /* FusNotificationCenterTests.m */; };
 		7E8E60E61D5123B400EAE9E6 /* FUSFakeNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8E60E51D5123B400EAE9E6 /* FUSFakeNotificationCenter.m */; };
 		7E8E60E71D512F3400EAE9E6 /* FUSFakeNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8E60E51D5123B400EAE9E6 /* FUSFakeNotificationCenter.m */; };
+		7E8E60EB1D513BF000EAE9E6 /* FUSCurrencies.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8E60EA1D513BF000EAE9E6 /* FUSCurrencies.m */; };
 		971D09A51D4B665500951664 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 971D09A41D4B665500951664 /* main.m */; };
 		971D09A81D4B665500951664 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 971D09A71D4B665500951664 /* AppDelegate.m */; };
 		971D09B01D4B665500951664 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 971D09AF1D4B665500951664 /* Assets.xcassets */; };
@@ -56,6 +57,8 @@
 		7E8E60E21D511FC600EAE9E6 /* FusNotificationCenterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FusNotificationCenterTests.m; sourceTree = "<group>"; };
 		7E8E60E41D5123B400EAE9E6 /* FUSFakeNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUSFakeNotificationCenter.h; sourceTree = "<group>"; };
 		7E8E60E51D5123B400EAE9E6 /* FUSFakeNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUSFakeNotificationCenter.m; sourceTree = "<group>"; };
+		7E8E60E91D513BF000EAE9E6 /* FUSCurrencies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUSCurrencies.h; sourceTree = "<group>"; };
+		7E8E60EA1D513BF000EAE9E6 /* FUSCurrencies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUSCurrencies.m; sourceTree = "<group>"; };
 		971D09A01D4B665500951664 /* FusWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FusWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		971D09A41D4B665500951664 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		971D09A61D4B665500951664 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -205,6 +208,8 @@
 				97E0C6951D4E82AF00963EF7 /* FUSBroker.m */,
 				97E0C69A1D4EC45F00963EF7 /* FUSWallet.h */,
 				97E0C69B1D4EC45F00963EF7 /* FUSWallet.m */,
+				7E8E60E91D513BF000EAE9E6 /* FUSCurrencies.h */,
+				7E8E60EA1D513BF000EAE9E6 /* FUSCurrencies.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -378,6 +383,7 @@
 				97E0C69C1D4EC45F00963EF7 /* FUSWallet.m in Sources */,
 				7E8E60E71D512F3400EAE9E6 /* FUSFakeNotificationCenter.m in Sources */,
 				97D1DE111D50138300AE3F33 /* FUSWalletTableViewController.m in Sources */,
+				7E8E60EB1D513BF000EAE9E6 /* FUSCurrencies.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

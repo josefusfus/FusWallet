@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FUSBroker.h"
 @class FUSWallet;
 
 @interface FUSWalletTableViewController : UITableViewController
 
--(id) initWithModel:(FUSWallet *) model;
+-(id) initWithModel:(FUSWallet *) model
+             broker: (FUSBroker *) broker;
 
 @end

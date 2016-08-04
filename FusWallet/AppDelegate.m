@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "FUSMoney.h"
+#import "FUSWalletTableViewController.h"
+#import "FUSWallet.h"
+#import "FUSBroker.h"
 
 @interface AppDelegate ()
 
@@ -15,8 +19,45 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+- (BOOL)application:(UIApplication *)application
+didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    FUSMoney *euros = [FUSMoney euroWithAmount:20];
+    FUSMoney *dollar = [FUSMoney dollarWithAmount:30];
+    FUSMoney *mxn = [FUSMoney mxnWithAmount:40];
+    
+    
+    //Creamos el modelo
+    FUSWallet *wallet = [[FUSWallet alloc] initWithAmount:1 currency:@"USD"];
+    [wallet plus:euros];
+    [wallet plus:dollar];
+    [wallet plus:euros];
+    [wallet plus:mxn];
+    FUSBroker *broker = [[FUSBroker alloc] init];
+    [broker addRate:2 fromCurrency:@"EUR" toCurrency:@"MXN"];
+    [broker addRate:4 fromCurrency:@"USD" toCurrency:@"EUR"];
+    
+    
+    //Creamos el controlador
+    
+    FUSWalletTableViewController *walletVC = [[FUSWalletTableViewController alloc] initWithModel:wallet broker:broker];
+    
+    //Creamos un navigation
+    
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:walletVC];
+    
+    // Lo asignamos al controlador raiz
+    
+    self.window.rootViewController = navVC;
+    
+    self.window.backgroundColor = [UIColor redColor];
+    [self.window makeKeyAndVisible];
+    
+    
+    
     return YES;
 }
 
